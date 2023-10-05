@@ -71,12 +71,69 @@ console.log(conjoined);
 interface Book {
   author?: string;
   pages: number;
-  };
-  // Ok
-  const ok: Book = {
+}
+// Ok
+const ok: Book = {
   author: "Rita Dove",
   pages: 80,
+};
+const missing: Book = {
+  pages: 80,
+};
+
+// Inferred type: string
+let bestSong = Math.random() > 0.5 ? "Chain of Fools" : "Respect";
+
+let rocker; // Type: any
+rocker = "Joan Jett"; // Type: string
+rocker.toUpperCase(); // Ok
+rocker = 19.58; // Type: number
+rocker.toPrecision(1); // Ok
+// rocker.toUpperCase();
+
+let rocker1: string;
+rocker = "Joan Jett";
+// rocker1 = 12;
+
+// let mathematician = Math.random() > 0.5
+// ? undefined
+// : "Mark Goldberg";
+
+// let physicist = Math.random() > 0.5
+// ? "Marie Curie"
+// : 84;
+
+// let admiral: number | string;
+// admiral = "20";
+// admiral.toUpperCase(); // Ok: string
+// admiral.toFixed();
+
+let scientist = Math.random() > 0.5
+? "Rosalind Franklin"
+: 51;
+if (scientist === "Rosalind Franklin") {
+// Type of scientist: string
+scientist.toUpperCase(); // Ok
+}
+// Type of scientist: number | string
+// scientist.toUpperCase();
+let mathematician: string | undefined;
+mathematician?.length; // Ok
+mathematician = "Mark Goldberg";
+mathematician.length; 
+
+type Poet = {
+  born: number;
+  name: string;
   };
-  const missing: Book = {
-  pages: 80
+  let poetLater: Poet;
+  // Ok
+  poetLater = {
+  born: 1935,
+  name: "Sara Teasdale",
   };
+  poetLater = "Emily Dickinson";
+
+
+
+
