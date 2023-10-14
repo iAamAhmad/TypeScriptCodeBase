@@ -201,7 +201,7 @@ console.log(conjoined);
 // }
 // console.log(a)
 
-// 
+//
 // let a ="pak";
 // a=9;
 // interface Ball {
@@ -229,4 +229,8 @@ console.log(conjoined);
 
 let myname: unknown = "Zia";
 console.log((myname as string).length);
-console.log((<string> myname).length)
+console.log((<string>myname).length);
+
+let mynameOne: unknown = "Zia";
+console.log((mynameOne as string).length);
+console.log((<string>mynameOne).length);
