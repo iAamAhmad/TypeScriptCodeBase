@@ -137,7 +137,6 @@ console.log(conjoined);
 // let type2 = { id: 2, name: "zia", age: 22 };
 // console.log((type1 = type2));
 
-
 // type one=(string)=>void;
 // function two(f:one){
 //   f("here")
@@ -155,7 +154,6 @@ console.log(conjoined);
 // type1 = {  name: "tom", id: 2};
 // type1 = {   id: 2, name: "jack",};
 
-
 // var f:(string)=>string;
 // f=x=>('+ X +');
 // var h:((string)=>string)[]
@@ -172,7 +170,6 @@ console.log(conjoined);
 //   }
 // }
 
-
 // var x:any="ahmad";
 // if (typeof x==="string"){
 //   console.log(x.length);
@@ -183,12 +180,53 @@ console.log(conjoined);
 // x={id:2, name:"falak"};
 // x={id:2, name:"falak", lastName:"foo"};
 // x={id:2, name:false};
-let array1: number[]=[2,3,4];
-let array2:Array<number> =[1,23,3];
-let array3=new Array[number];
-let array5:number[]=new number[5]
+// let array1: number[]=[2,3,4];
+// let array2:Array<number> =[1,23,3];
+// let array3=new Array[number];
+// let array5:number[]=new number[5]
 
+// let x={name:"ahmad", id:1};
+// x={id:2, name:"falak"};
+// x={id:2, name:"falak", lastName:"foo"};
+// x={id:2, name:false};
 
+// var a: number = "7";
+// a = 9;
+// console.log(a);
 
+// if(true){
+//   let a=4;
+// }else{
+//   let a="string"
+// }
+// console.log(a)
 
+// 
+// let a ="pak";
+// a=9;
+// interface Ball {
+//   diameter: number;
+// }
 
+// interface Sphere {
+//   diameter: number;
+// }
+
+// let ball: Ball = { diameter: 10 };
+// let sphere: Sphere = { diameter: 20 };
+
+// sphere = ball;
+// ball = sphere;
+// interface Tube {
+//   diameter: number;
+//   length: number;
+// }
+
+// let tube: Tube = { diameter: 12, length: 3 };
+
+// tube = ball;//Error
+// ball = tube;
+
+let myname: unknown = "Zia";
+console.log((myname as string).length);
+console.log((<string> myname).length)
